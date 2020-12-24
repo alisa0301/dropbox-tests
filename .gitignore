@@ -1,0 +1,15 @@
+*.iml
+.idea
+.gradle
+out
+build
+.allure
+
+.bloop/
+.classpath
+.metals/
+.nvimlog
+.project
+.settings/
+bin/
+target/
