@@ -43,5 +43,5 @@ public class Config {
 
 class Constants {
     public static final ObjectMapper MAPPER = new ObjectMapper(new YAMLFactory());
-    public static final String PROP_FILE_NAME = "test/resources/config.properties";
+    public static final String PROP_FILE_NAME = "config.properties";
 }

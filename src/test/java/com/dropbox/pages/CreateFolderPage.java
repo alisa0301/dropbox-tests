@@ -13,9 +13,9 @@ public class CreateFolderPage {
     @FindBy(id = ".dig-Modal-footer button.dig-Button--primary")
     private SelenideElement createFolderButton;
 
-    public HomePage createFolderWithName(String name) {
+    public FolderPage createFolderWithName(String name) {
         folderNameInput.setValue(name);
         createFolderButton.click();
-        return page(HomePage.class);
+        return page(FolderPage.class);
     }
 }

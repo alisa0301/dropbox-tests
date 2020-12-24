@@ -1,5 +1,6 @@
 package com.dropbox.pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -21,6 +22,13 @@ public class LoginPage {
         this.password.setValue(password);
         this.signInButton.click();
         return page(HomePage.class);
+    }
+
+    public LoginPage isLoaded() {
+        login.shouldBe(Condition.visible);
+        password.shouldBe(Condition.visible);
+        signInButton.shouldBe(Condition.visible);
+        return this;
     }
 
 }

@@ -1,5 +1,6 @@
 package com.dropbox.pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
@@ -28,18 +29,22 @@ public class HomePage {
         return page(CreateFolderPage.class);
     }
 
-    public HomePage uploadFile(String fileName) {
+    public ChooseFolderPage uploadFile(String fileName) {
         if (onboardingButton.is(appear)) {
             onboardingButton.click();
         }
         $("$('[type=file]')").uploadFromClasspath(fileName);
-        return this;
+        return page(ChooseFolderPage.class);
     }
 
     public LoginPage logout() {
         accountMenu.click();
         $(By.xpath("/html/body/div[18]/div/nav/div/div[2]/div[2]")).click();
         return page(LoginPage.class);
+    }
+
+    public void downloadBarShouldBeLoaded() {
+        $(".dig-Snackbar").shouldBe(appear);
     }
 
 }

@@ -12,7 +12,8 @@ public class DropboxUploadFileTests extends BaseTests {
     @DisplayName("Upload correct file")
     void uploadFileTest(String fileName) {
         loginToDropboxByDefaultUser()
-                .uploadFile(fileName);
-
+                .uploadFile(fileName)
+                .chooseFolder()
+                .downloadBarShouldBeLoaded();
     }
 }
