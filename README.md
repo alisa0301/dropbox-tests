@@ -20,4 +20,4 @@ Selenide is a Selenium wrapper. This library resolve a lot of problems of UI tes
 `mvn allure:serve`
 
 last build status:
-![Build Status](https://travis-ci.com/alisa0301/dropbox-tests-optile.svg?branch=main)](https://travis-ci.com/alisa0301/dropbox-tests-optile)
+[![Build Status](https://travis-ci.com/alisa0301/dropbox-tests-optile.svg?branch=main)](https://travis-ci.com/alisa0301/dropbox-tests-optile)
